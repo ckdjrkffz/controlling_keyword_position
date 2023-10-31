@@ -1,5 +1,5 @@
-## Overview
-This is code for an experiment to reproduce the paper. During the review, refer to this code if necessary.
+# Controlling keywords and their positions in text generation
+This is the code to reproduce our paper. [arXiv](https://arxiv.org/pdf/2304.09516.pdf)
 
 ## Requirement
 ```
@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 #### CNN/DM
 
-Get the dataset from [here](https://github.com/icml-2020-nlp/semsim/tree/master/datasets) and extract the dataset. Next, run following preprocess script.
+Get the dataset from [here](https://github.com/icml-2020-nlp/semsim/tree/master/datasets) and extract the dataset at `dataset/cnndm`. Next, run following preprocess script.
 
 ```
 python prepare_cnndm.py --data_path dataset/cnndm
@@ -27,7 +27,7 @@ python prepare_xsum.py --data_path dataset/xsum
 
 #### ROCStories
 
-Get this dataset from [site](https://cs.rochester.edu/nlp/rocstories/).
+Get this dataset from [site](https://cs.rochester.edu/nlp/rocstories/) and place it at `dataset/stories`. To download the dataset, you need to fill the form.
 
 ```
 python prepare_stories.py --data_path dataset/stories
@@ -51,7 +51,7 @@ python prepare_keyword_extraction.py --data_path dataset/cnndm --num_keywords $n
 
 
 
-## Model 
+## Model
 
 We got the BART-large model from [here](https://huggingface.co/facebook/bart-large).
 We got the GPT model from [here](https://huggingface.co/gpt2).
